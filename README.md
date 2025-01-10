@@ -5,11 +5,14 @@
 
 # Prosjektet
 
-Model defined network management platform for sensors with NETCONF/YANG interface
-
-6x sensor interfaces, POE ethernet with processor board (Raspberry Pi or custom), 1U rack form factor
-
-- Sensors interface [Sensirion] ( https://sensirion.com/products/sensor-evaluation )
+Model defined network management platform for sensors with NETCONF/YANG interface:
+- 6x sensor interfaces
+    - Sensors interface [Sensirion] ( https://sensirion.com/products/sensor-evaluation )
+- Power Over Ethernet
+- Ethernet Interface
+- 1U form factor
+- Processing
+    - Raspberry Pi or Custom board
 
 # Oppgaver
 
