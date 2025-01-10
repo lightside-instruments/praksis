@@ -7,7 +7,7 @@
 
 Model defined network management platform for sensors with NETCONF/YANG interface:
 - 6x sensor interfaces
-    - Sensors interface [Sensirion] ( https://sensirion.com/products/sensor-evaluation )
+    - Sensors interface [Sensirion](https://sensirion.com/products/sensor-evaluation)
 - Power Over Ethernet
 - Ethernet Interface
 - 1U form factor
@@ -17,5 +17,6 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 # Oppgaver
 
 - Cybersecurity
+    - Build Server
 - E-Business
 - Programmering
