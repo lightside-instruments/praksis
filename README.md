@@ -21,4 +21,8 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 - Cybersecurity
     - Build Server
 - E-Business
-- Programmering
+- Programming
+    - Implement API for controlling the board and sensors
+    - Implement NETCONF/YANG interface
+- Hardware
+    - Finish board design for [Spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)
