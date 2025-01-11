@@ -5,6 +5,8 @@
 
 # Prosjektet
 
+repo: [Spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)
+
 Model defined network management platform for sensors with NETCONF/YANG interface:
 - 6x sensor interfaces
     - Sensors interface [Sensirion](https://sensirion.com/products/sensor-evaluation)
