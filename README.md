@@ -5,7 +5,8 @@
 
 # Prosjektet
 
-repo: [Spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)
+repo: [Spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)\
+An implementation overview can be found [here](https://github.com/Slenderman00/spark4pi-sensor-project-plan/blob/main/Spark4pi-sensors-impementational-overview.pdf)
 
 Model defined network management platform for sensors with NETCONF/YANG interface:
 - 6x sensor interfaces
