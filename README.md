@@ -11,6 +11,7 @@ An implementation overview can be found [here](https://github.com/Slenderman00/s
 Model defined network management platform for sensors with NETCONF/YANG interface:
 - 6x sensor interfaces
     - Sensors interface [Sensirion](https://sensirion.com/products/sensor-evaluation)
+    - SEK-bridge [Sensirion](https://sensirion.com/products/catalog/SEK-SensorBridge)
 - Power Over Ethernet
 - Ethernet Interface
 - 1U form factor
