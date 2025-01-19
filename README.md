@@ -6,10 +6,15 @@
 
 ## System overview
 
-Reliabile sensor monitoring netowork on the edge independent of centralized connection and cloud based services based on NETCONF/YANG network managed sensor devices and independent monitoring orchestrators.
+Reliabile sensor monitoring network on the edge independent of centralized connection and cloud based services based on NETCONF/YANG network managed sensor devices and independent monitoring orchestrators.
 
 The system should demonstrate resilience through redundancy 2x sensor devices and 2x orchestrators.
 Down time on 1x orchestrator and 1x sensor should not cause downtime of the system.
+
+The orchestrators should keep records of the measured sensor data and generate alarm when alarm thresholds are crossed. There should be visualization (e.g. Grafana) displaying the timeseries data.
+
+The system is to be installed and demonstrated in the laser cutter room where monitoring of temperature, humidity and toxic gas (e.g. Chlorine (CL2)) concentrations is important. Also a digital sensor for simulation of sensor events in the process of validation and testing should be implemented. Triggering this event should be done with independent device that also implements a NETCONF/YANG interface.
+
 
 <tt>
 
