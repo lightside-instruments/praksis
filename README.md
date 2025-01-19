@@ -11,7 +11,7 @@ Reliabile sensor monitoring netowork on the edge independent of centralized conn
 The system should demonstrate resilience through redundancy 2x sensor devices and 2x orchestrators.
 Down time on 1x orchestrator and 1x sensor should not cause downtime of the system.
 
-
+<tt>
 
 
 Device #1                        Orchestrator #1
@@ -26,6 +26,7 @@ Device #2                        Orchestrator #2
 +-----------------+              |         |
                                  +---------+
 
+</tt>
 
 ## Details
 
