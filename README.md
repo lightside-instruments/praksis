@@ -55,6 +55,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Pros and cons using upstream Debian package repository (optional)
     - Automated tests in python (optional)
     - Build Server (optional)
+    - Compare NETCONF with MODBUS
 - Programming
     - Select standard model or implement model in YANG for the device (ietf-hardware.yang vs. lsi-sensors.yang)
     - Implement ietf-alarms.yang both for device and orchestrator
