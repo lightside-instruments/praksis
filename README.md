@@ -48,7 +48,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 - Processing
     - Raspberry Pi or Custom board
 
-# Oppgaver
+# Tasks
 
 - Cybersecurity
     - Pros and cons of NETCONF/SSH and recommended encryption algorithms (RFC6241)
