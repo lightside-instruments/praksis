@@ -52,6 +52,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 # Tasks
 
 - Cybersecurity
+    - Quantitative analysis of NETCONF and YANG security
     - Pros and cons of NETCONF/SSH and recommended encryption algorithms (RFC6241)
     - Pros and cons using upstream Debian package repository (optional)
     - Automated tests in python (optional)
