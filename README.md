@@ -59,6 +59,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Build Server (optional)
     - Compare NETCONF with MODBUS
 - Programming
+    - Timeseries XPATH
     - Select standard model or implement model in YANG for the device (ietf-hardware.yang vs. lsi-sensors.yang)
     - Implement ietf-alarms.yang both for device and orchestrator
     - Implement API for controlling the board and sensors
