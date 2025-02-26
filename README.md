@@ -1,8 +1,8 @@
-# Selskapet
+# Company
 
 * Web site: *[Lightside Instruments AS](https://lightside-instruments.com)*
 
-# Prosjektet
+# Project
 
 ## System overview
 
@@ -36,7 +36,7 @@ Device #2                        Orchestrator #2
 ## Details
 
 repo: [Spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)\
-An implementation overview can be found [here](https://github.com/Slenderman00/spark4pi-sensor-project-plan/blob/main/Spark4pi-sensors-impementational-overview.pdf)
+A project description can be found [here](https://github.com/Slenderman00/spark4pi-sensor-project-plan/blob/085f62d7cc909bd49f87859c767897c551bc6023/Report.pdf)
 
 Model defined network management platform for sensors with NETCONF/YANG interface:
 - 6x sensor interfaces
