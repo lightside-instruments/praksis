@@ -41,6 +41,7 @@ An implementation overview can be found [here](https://github.com/Slenderman00/s
 Model defined network management platform for sensors with NETCONF/YANG interface:
 - 6x sensor interfaces
     - Sensors interface [Sensirion](https://sensirion.com/products/sensor-evaluation)
+        - [STS3x-DIS](https://sensirion.com/media/documents/1DA31AFD/65D613A8/Datasheet_STS3x_DIS.pdf)
     - SEK-bridge [Sensirion](https://sensirion.com/products/catalog/SEK-SensorBridge)
 - Power Over Ethernet
 - Ethernet Interface
