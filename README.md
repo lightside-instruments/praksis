@@ -50,7 +50,8 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Raspberry Pi or Custom board
 
 # Tasks
-
+- Administration
+    [ ] Installation of Ubuntu 24 on laptop (Christian 1 hour)
 - Cybersecurity
     - Quantitative analysis of NETCONF and YANG security
     - Pros and cons of NETCONF/SSH and recommended encryption algorithms (RFC6241)
