@@ -51,6 +51,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 
 # Tasks
 - Administration
+    - [ ] Installation of Debian Raspberry Pi (Christian 1 hour)
     - [ ] Installation of Ubuntu 24 on laptop (Christian 1 hour)
 - Cybersecurity
     - Quantitative analysis of NETCONF and YANG security
@@ -65,5 +66,6 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Implement ietf-alarms.yang both for device and orchestrator
     - Implement API for controlling the board and sensors
     - Implement NETCONF/YANG interface
+      - [x] Implementation of lsi-thermometer.yang added thermometers-get-raspberry-pi-i2c-sts3x shell script (Joar,Christian 1 hour)
 - Hardware
     - Finish board design for [spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)
