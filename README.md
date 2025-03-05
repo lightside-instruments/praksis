@@ -51,7 +51,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 
 # Tasks
 - Administration
-    - [ ] Installation of Debian Raspberry Pi (Christian 1 hour)
+    - [x] Installation of Debian Raspberry Pi (Christian 1 hour)
     - [ ] Installation of Ubuntu 24 on laptop (Christian 1 hour)
 - Cybersecurity
     - Quantitative analysis of NETCONF and YANG security
