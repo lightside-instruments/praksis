@@ -22,10 +22,10 @@ The system is to be installed and demonstrated in the laser cutter room where mo
 Device #1                        Orchestrator #1
 +-----------------+              +---------+
 |  o  1 2 3 4 5 6 |              |         |
-+-----------------+              |         |
-                                 +---------+
-
-Device #2                        Orchestrator #2
++-----------------+       _      |         |
+                         \ /     +---------+
+                          x
+Device #2                /_\     Orchestrator #2
 +-----------------+              +---------+
 |  o  1 2 3 4 5 6 |              |         |
 +-----------------+              |         |
@@ -53,6 +53,10 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 - Administration
     - [x] Installation of Debian Raspberry Pi (Christian 1 hour)
     - [x] Installation of Ubuntu 24 on laptop (Christian 1 hour)
+- IETF Hackathon 122 (remote) 15 - 16 March 2025
+    - [ ] Register as remote participants https://registration.ietf.org/122/new/hackathon_remote/
+    - [ ] Running testsuite and releasing yuma123-2.14
+    - [ ] Debian packaging of yuma123-2.14
 - Cybersecurity
     - Quantitative analysis of NETCONF and YANG security
     - Pros and cons of NETCONF/SSH and recommended encryption algorithms (RFC6241)
@@ -61,6 +65,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Build Server (optional)
     - Compare NETCONF with MODBUS
 - Programming
+    - Orchestrator: node-red flow with NETCONF <get> and NETCONF yangcli automated <edit> functionality
     - Timeseries XPATH
     - Select standard model or implement model in YANG for the device (ietf-hardware.yang vs. lsi-sensors.yang)
     - Implement ietf-alarms.yang both for device and orchestrator
