@@ -72,5 +72,6 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Implement API for controlling the board and sensors
     - Implement NETCONF/YANG interface
       - [x] Implementation of lsi-thermometer.yang added thermometers-get-raspberry-pi-i2c-sts3x shell script (Joar,Christian 1 hour)
+    - Yuma123 CI github action
 - Hardware
     - Finish board design for [spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)
