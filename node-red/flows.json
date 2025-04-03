@@ -1,0 +1,391 @@
+[
+    {
+        "id": "4791962010143f14",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f63f8e7b4869e3f7",
+        "type": "inject",
+        "z": "4791962010143f14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "f29fe7768cf4096f",
+                "70aa99c08ddd2034"
+            ]
+        ]
+    },
+    {
+        "id": "f29fe7768cf4096f",
+        "type": "exec",
+        "z": "4791962010143f14",
+        "command": "yangcli --server=10.13.37.162 --user=pi --password=kristianiapraksis --batch-mode --run-command=\"replace /gpios/gpio[name='GPIO17'] -- level='1'\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1100,
+        "y": 120,
+        "wires": [
+            [
+                "a3f01f5bcfd74a92"
+            ],
+            [],
+            [
+                "b1cbcfe1b40c23f6"
+            ]
+        ]
+    },
+    {
+        "id": "b1cbcfe1b40c23f6",
+        "type": "exec",
+        "z": "4791962010143f14",
+        "command": "yangcli --server=10.13.37.162 --user=pi --password=kristianiapraksis --batch-mode --run-command=\"commit\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 2080,
+        "y": 120,
+        "wires": [
+            [
+                "8d802478f7f93adb"
+            ],
+            [],
+            [
+                "5a3a731efa8ab93d"
+            ]
+        ]
+    },
+    {
+        "id": "70aa99c08ddd2034",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a3f01f5bcfd74a92",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8d802478f7f93adb",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2560,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5a3a731efa8ab93d",
+        "type": "exec",
+        "z": "4791962010143f14",
+        "command": "yangcli --server=10.13.37.162 --user=pi --password=kristianiapraksis --batch-mode --run-command=\"replace /gpios/gpio[name='GPIO17'] -- level='0'\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 3080,
+        "y": 120,
+        "wires": [
+            [
+                "4fbc63c1c7adda62",
+                "763b8b75158947af"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4fbc63c1c7adda62",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3720,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "763b8b75158947af",
+        "type": "exec",
+        "z": "4791962010143f14",
+        "command": "yangcli --server=10.13.37.162 --user=pi --password=kristianiapraksis --batch-mode --run-command=\"commit\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 4060,
+        "y": 120,
+        "wires": [
+            [
+                "fc64f3fa35e909dc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fc64f3fa35e909dc",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d098e1456da8de12",
+        "type": "inject",
+        "z": "4791962010143f14",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 500,
+        "wires": [
+            [
+                "6a092735d9cd7f0a",
+                "3e1dca9e61a829dc"
+            ]
+        ]
+    },
+    {
+        "id": "6a092735d9cd7f0a",
+        "type": "exec",
+        "z": "4791962010143f14",
+        "command": "yangcli --server=10.13.37.162 --user=pi --password=kristianiapraksis --batch-mode --run-command=\"xget /\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 810,
+        "y": 500,
+        "wires": [
+            [
+                "cf12efda9fb8b7cb",
+                "80061bcd7889729f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "89552c11243c8e0b",
+        "type": "exec",
+        "z": "4791962010143f14",
+        "command": "grep -B 2 -A 2 th0 /tmp/yangcli-get.stdout",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1440,
+        "y": 500,
+        "wires": [
+            [
+                "232b0f84790cb718"
+            ],
+            [
+                "c75626429baa371d"
+            ],
+            [
+                "f3827bdb499ce9b5"
+            ]
+        ]
+    },
+    {
+        "id": "232b0f84790cb718",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cf12efda9fb8b7cb",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3e1dca9e61a829dc",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "c75626429baa371d",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "f3827bdb499ce9b5",
+        "type": "debug",
+        "z": "4791962010143f14",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "80061bcd7889729f",
+        "type": "file",
+        "z": "4791962010143f14",
+        "name": "",
+        "filename": "/tmp/yangcli-get.stdout",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1320,
+        "y": 680,
+        "wires": [
+            [
+                "89552c11243c8e0b"
+            ]
+        ]
+    }
+]
