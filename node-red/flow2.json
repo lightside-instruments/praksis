@@ -1,0 +1,154 @@
+[
+    {
+        "id": "181142a4af92c261",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9abaf1e5b4c79b16",
+        "type": "netconf session",
+        "z": "181142a4af92c261",
+        "name": "Session 1",
+        "host": "10.13.37.162",
+        "port": 830,
+        "username": "pi",
+        "password": "kristianiapraksis",
+        "privpath": "",
+        "pubpath": "",
+        "x": 280,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2d60ae4e8d4906fe",
+        "type": "inject",
+        "z": "181142a4af92c261",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "4d641bb92503e368"
+            ]
+        ]
+    },
+    {
+        "id": "ac0be886a933a888",
+        "type": "debug",
+        "z": "181142a4af92c261",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "4d641bb92503e368",
+        "type": "netconf yangcli",
+        "z": "181142a4af92c261",
+        "name": "High",
+        "sessionNode": "9abaf1e5b4c79b16",
+        "commandTemplate": "replace /gpios/gpio[name='GPIO17'] -- level='1'",
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "ac0be886a933a888",
+                "652bca29cfe7cb46"
+            ]
+        ]
+    },
+    {
+        "id": "652bca29cfe7cb46",
+        "type": "netconf yangcli",
+        "z": "181142a4af92c261",
+        "name": "Commit",
+        "sessionNode": "9abaf1e5b4c79b16",
+        "commandTemplate": "commit",
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "da52209ce8a6dc7f"
+            ]
+        ]
+    },
+    {
+        "id": "da52209ce8a6dc7f",
+        "type": "delay",
+        "z": "181142a4af92c261",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.25",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 340,
+        "wires": [
+            [
+                "cfe2c2f912a0e382"
+            ]
+        ]
+    },
+    {
+        "id": "cfe2c2f912a0e382",
+        "type": "netconf yangcli",
+        "z": "181142a4af92c261",
+        "name": "Low",
+        "sessionNode": "9abaf1e5b4c79b16",
+        "commandTemplate": "replace /gpios/gpio[name='GPIO17'] -- level='0'",
+        "x": 940,
+        "y": 340,
+        "wires": [
+            [
+                "e3a22f471ecf9279"
+            ]
+        ]
+    },
+    {
+        "id": "e3a22f471ecf9279",
+        "type": "netconf yangcli",
+        "z": "181142a4af92c261",
+        "name": "Commit",
+        "sessionNode": "9abaf1e5b4c79b16",
+        "commandTemplate": "commit",
+        "x": 1100,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    }
+]
