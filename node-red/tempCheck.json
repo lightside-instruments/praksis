@@ -1,0 +1,201 @@
+[
+    {
+        "id": "0bef19c017dbfde3",
+        "type": "tab",
+        "label": "temp check",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b09e14abcc43291d",
+        "type": "netconf session",
+        "z": "0bef19c017dbfde3",
+        "name": "Session Temp Sensor",
+        "host": "10.13.37.162",
+        "port": 830,
+        "username": "pi",
+        "password": "kristianiapraksis",
+        "privpath": "",
+        "pubpath": "",
+        "x": 360,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "62b24726c02e2d2d",
+        "type": "netconf session",
+        "z": "0bef19c017dbfde3",
+        "name": "Session Led",
+        "host": "10.13.37.162",
+        "port": 830,
+        "username": "pi",
+        "password": "kristianiapraksis",
+        "privpath": "",
+        "pubpath": "",
+        "x": 570,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8a8d28c3cae8c84f",
+        "type": "inject",
+        "z": "0bef19c017dbfde3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "4a44b1cbc1e3df2d"
+            ]
+        ]
+    },
+    {
+        "id": "4a44b1cbc1e3df2d",
+        "type": "netconf yangcli",
+        "z": "0bef19c017dbfde3",
+        "name": "",
+        "sessionNode": "b09e14abcc43291d",
+        "commandTemplate": "xget /thermometers/thermometer[name='th0']",
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "23e4921dc70b527a",
+                "23229df90ebf29e9"
+            ]
+        ]
+    },
+    {
+        "id": "23e4921dc70b527a",
+        "type": "debug",
+        "z": "0bef19c017dbfde3",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "23229df90ebf29e9",
+        "type": "function",
+        "z": "0bef19c017dbfde3",
+        "name": "function 1",
+        "func": "let tmp = msg.payload['rpc-reply']['data']['thermometers']['thermometer']['value'];\ntmp = tmp / 100\n\nif(tmp < 28) {\n    return [{ 'payload': tmp }, null];\n} else {\n    return [null, { 'payload': tmp }];\n}\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 300,
+        "wires": [
+            [
+                "12915240e68d87a7",
+                "f8066246d6b7e0a2"
+            ],
+            [
+                "0c688835e923c3fc",
+                "c0650c841d474768"
+            ]
+        ]
+    },
+    {
+        "id": "12915240e68d87a7",
+        "type": "debug",
+        "z": "0bef19c017dbfde3",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0c688835e923c3fc",
+        "type": "debug",
+        "z": "0bef19c017dbfde3",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "96de80f9f1498aa5",
+        "type": "netconf yangcli",
+        "z": "0bef19c017dbfde3",
+        "name": "Commit",
+        "sessionNode": "62b24726c02e2d2d",
+        "commandTemplate": "commit",
+        "x": 960,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0650c841d474768",
+        "type": "netconf yangcli",
+        "z": "0bef19c017dbfde3",
+        "name": "High",
+        "sessionNode": "62b24726c02e2d2d",
+        "commandTemplate": "replace /gpios/gpio[name='GPIO17'] -- level='1'",
+        "x": 790,
+        "y": 320,
+        "wires": [
+            [
+                "96de80f9f1498aa5"
+            ]
+        ]
+    },
+    {
+        "id": "f8066246d6b7e0a2",
+        "type": "netconf yangcli",
+        "z": "0bef19c017dbfde3",
+        "name": "Low",
+        "sessionNode": "62b24726c02e2d2d",
+        "commandTemplate": "replace /gpios/gpio[name='GPIO17'] -- level='0'",
+        "x": 790,
+        "y": 260,
+        "wires": [
+            [
+                "96de80f9f1498aa5"
+            ]
+        ]
+    }
+]
