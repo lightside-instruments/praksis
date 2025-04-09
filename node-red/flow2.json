@@ -18,7 +18,7 @@
         "password": "kristianiapraksis",
         "privpath": "",
         "pubpath": "",
-        "x": 280,
+        "x": 200,
         "y": 260,
         "wires": []
     },
@@ -36,14 +36,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "0.5",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 290,
+        "x": 200,
         "y": 340,
         "wires": [
             [
@@ -63,8 +63,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 420,
+        "x": 620,
+        "y": 460,
         "wires": []
     },
     {
@@ -104,7 +104,7 @@
         "z": "181142a4af92c261",
         "name": "",
         "pauseType": "delay",
-        "timeout": "0.25",
+        "timeout": "0.1",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -148,7 +148,34 @@
         "x": 1100,
         "y": 340,
         "wires": [
-            []
+            [
+                "7c04ddbbd52330d8"
+            ]
+        ]
+    },
+    {
+        "id": "7c04ddbbd52330d8",
+        "type": "delay",
+        "z": "181142a4af92c261",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "4d641bb92503e368"
+            ]
         ]
     }
 ]
