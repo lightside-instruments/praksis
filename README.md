@@ -55,8 +55,8 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - [x] Installation of Ubuntu 24 on laptop (Christian 1 hour)
 - IETF Hackathon 122 (remote) 15 - 16 March 2025
     - [ ] Register as remote participants https://registration.ietf.org/122/new/hackathon_remote/
-    - [ ] Running testsuite and releasing yuma123-2.14
-    - [ ] Debian packaging of yuma123-2.14
+    - [x] Running testsuite and releasing yuma123-2.14
+    - [x] Debian packaging of yuma123-2.14
 - Cybersecurity
     - Quantitative analysis of NETCONF and YANG security
     - Pros and cons of NETCONF/SSH and recommended encryption algorithms (RFC6241)
@@ -76,3 +76,14 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Yuma123 CI github action
 - Hardware
     - Finish board design for [spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)
+
+- Demo Rack
+    - [ ] 2x DIN rail mounting brackets for Raspberry Pi
+    - [ ] 2x DIN rail mounting brackets for Display
+    - [ ] 2x I2C sensor boards
+    - [ ] 1x mounting rail for PoE Switch
+    - [ ] Alarm light
+
+
+
+
