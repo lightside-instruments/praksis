@@ -1,0 +1,5 @@
+#!/bin/sh -e
+export USER=root
+export HOME=/root
+netconfd --module=helloworld --module=lsi-thermometers --no-startup --superuser=pi 1>/var/log/netconfd.log 2>/var/log/netconfd.stderr.log &
+nmcli con mod "Wired connection 1" ipv4.method manual ipv4.addr 10.0.0.12/24
