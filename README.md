@@ -88,7 +88,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 
 
 # Topology:
- [Orchestrator Node Node-Red/Graphana - 10.0.0.?]  [Alarm Light Node - 10.0.0.15] [Sensor Node 1 - 10.0.0.?] [Sensor Node 2 - 10.0.0.?]
+ [Orchestrator Node Node-Red/Grafana - 10.0.0.?]  [Alarm Light Node - 10.0.0.15] [Sensor Node 1 - 10.0.0.?] [Sensor Node 2 - 10.0.0.?]
 
 
 # Used yangcli commands:
