@@ -1,4 +1,9 @@
 This script downloads, compiles and installs everything necessary to turn a Raspberry Pi running the initial image committed in this repository and add the necessary sensor modules and their implementation.
 
 
+For Pi with thermo sensor run:
 ./run.sh
+
+For Pi with RGB LED strip run:
+./run-alarm-light.sh
+

@@ -73,6 +73,7 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
     - Implement API for controlling the board and sensors
     - Implement NETCONF/YANG interface
       - [x] Implementation of lsi-thermometer.yang added thermometers-get-raspberry-pi-i2c-sts3x shell script (Joar,Christian 1 hour)
+      - [x] Implementation of lsi-lights.yang
     - Yuma123 CI github action
 - Hardware
     - Finish board design for [spark4pi-sensors](https://github.com/Slenderman00/spark4pi-sensors)
@@ -86,4 +87,11 @@ Model defined network management platform for sensors with NETCONF/YANG interfac
 
 
 
+# Topology:
+ [Orchestrator Node Node-Red/Graphana - 10.0.0.?]  [Alarm Light Node - 10.0.0.15] [Sensor Node 1 - 10.0.0.?] [Sensor Node 2 - 10.0.0.?]
 
+
+# Used yangcli commands:
+
+Alarm RGB LED light node:
+ replace /lights/light[name='main'] -- red=255 green=0 blue=0
